@@ -6,7 +6,12 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -14,14 +19,18 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          "base-100": "#f8fafc",
-          "base-content": "#1f2937",
+          "base-100": "#ffffff",
+          "base-200": "#f8fafc",
+          "base-content": "#0f172a",
+          "primary": "#3b82f6",
+          "primary-content": "#ffffff",
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
           "base-100": "#1e293b",
           "base-200": "#273449",
-          primary: "#818cf8",
+          "base-content": "#f8fafc",
+          "primary": "#818cf8",
           "primary-content": "#ffffff",
         },
       },
